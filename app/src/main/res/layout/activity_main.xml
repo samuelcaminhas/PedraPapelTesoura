@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/papelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:onClick="paperButtonClicked"
+        android:text="Papel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pedraButtom"
+        app:layout_constraintEnd_toStartOf="@+id/tesouraButtom"
+        app:layout_constraintStart_toEndOf="@+id/pedraButtom" />
+
+    <TextView
+        android:id="@+id/userInputTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="47dp"
+        android:text="Faça sua escolha"
+        app:layout_constraintBottom_toTopOf="@+id/papelButton"
+        app:layout_constraintStart_toEndOf="@+id/pedraButtom" />
+
+
+    <Button
+        android:id="@+id/pedraButtom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="179dp"
+        android:onClick="rockButtonClicked"
+        android:text="Pedra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/papelButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WinLoseTV" />
+
+    <Button
+        android:id="@+id/tesouraButtom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:onClick="scissorsButtonClicked"
+        android:text="Tesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/papelButton"
+        app:layout_constraintTop_toTopOf="@+id/papelButton" />
+
+    <TextView
+        android:id="@+id/WinLoseTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="307dp"
+        android:text="Resultado"
+        app:layout_constraintStart_toStartOf="@+id/userInputTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cpuInputTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:text="Escolha da máquina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="31dp"
+        app:layout_constraintEnd_toEndOf="@+id/WinLoseTV"
+        app:layout_constraintTop_toBottomOf="@+id/WinLoseTV" />
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"
+        android:onClick="restartButtonClicked"
+        app:layout_constraintTop_toBottomOf="@id/resultTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
